@@ -7,10 +7,10 @@ PODS:
   - Swizzlean (0.1.2)
 
 DEPENDENCIES:
-  - Expecta (~> 0.2.4)
-  - KIF (~> 3.0)
+  - Expecta
+  - KIF
   - Specta (from `git@github.com:specta/specta.git`, commit `93e4eac3fc31e0539261ae2fb633cae7e6b93b33`)
-  - Swizzlean (~> 0.1.1)
+  - Swizzlean
 
 EXTERNAL SOURCES:
   Specta:

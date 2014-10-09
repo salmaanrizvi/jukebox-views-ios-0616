@@ -10,10 +10,10 @@ end
 target 'JukeboxViewsTests' do
   pod 'Specta',     :git=>'git@github.com:specta/specta.git', :commit=>'93e4eac3fc31e0539261ae2fb633cae7e6b93b33' 
 
-  pod 'Expecta',     '~> 0.2.4'                                                 
+  pod 'Expecta'
 
-  pod 'KIF', '~> 3.0'                                                           
+  pod 'KIF'
 
-  pod 'Swizzlean', '~> 0.1.1'  
+  pod 'Swizzlean'
 end
 
