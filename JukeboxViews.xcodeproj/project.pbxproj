@@ -19,7 +19,6 @@
 		72DD193419A66296004F3C2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DD191319A66296004F3C2F /* Foundation.framework */; };
 		72DD193519A66296004F3C2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DD191719A66296004F3C2F /* UIKit.framework */; };
 		72DD193D19A66296004F3C2F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72DD193B19A66296004F3C2F /* InfoPlist.strings */; };
-		72DD193F19A66296004F3C2F /* JukeboxViewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72DD193E19A66296004F3C2F /* JukeboxViewsTests.m */; };
 		72DD195619A66AEE004F3C2F /* hold_on_be_strong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 72DD195119A66AEE004F3C2F /* hold_on_be_strong.mp3 */; };
 		72DD195719A66AEE004F3C2F /* higher_love.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 72DD195219A66AEE004F3C2F /* higher_love.mp3 */; };
 		72DD195819A66AEE004F3C2F /* mo_money_mo_problems.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 72DD195319A66AEE004F3C2F /* mo_money_mo_problems.mp3 */; };
@@ -62,7 +61,6 @@
 		72DD193219A66296004F3C2F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		72DD193A19A66296004F3C2F /* JukeboxViewsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JukeboxViewsTests-Info.plist"; sourceTree = "<group>"; };
 		72DD193C19A66296004F3C2F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		72DD193E19A66296004F3C2F /* JukeboxViewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JukeboxViewsTests.m; sourceTree = "<group>"; };
 		72DD195119A66AEE004F3C2F /* hold_on_be_strong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hold_on_be_strong.mp3; sourceTree = "<group>"; };
 		72DD195219A66AEE004F3C2F /* higher_love.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = higher_love.mp3; sourceTree = "<group>"; };
 		72DD195319A66AEE004F3C2F /* mo_money_mo_problems.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mo_money_mo_problems.mp3; sourceTree = "<group>"; };
@@ -171,7 +169,6 @@
 		72DD193819A66296004F3C2F /* JukeboxViewsTests */ = {
 			isa = PBXGroup;
 			children = (
-				72DD193E19A66296004F3C2F /* JukeboxViewsTests.m */,
 				72DD193919A66296004F3C2F /* Supporting Files */,
 			);
 			path = JukeboxViewsTests;
@@ -359,7 +356,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72DD193F19A66296004F3C2F /* JukeboxViewsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
