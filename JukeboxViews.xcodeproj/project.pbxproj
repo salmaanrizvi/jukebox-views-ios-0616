@@ -27,6 +27,9 @@
 		72DD195A19A66AEE004F3C2F /* gangsta_bleeding_love.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 72DD195519A66AEE004F3C2F /* gangsta_bleeding_love.mp3 */; };
 		72DD195D19A66F3A004F3C2F /* bailando.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 72DD195C19A66F3A004F3C2F /* bailando.mp3 */; };
 		72DD195F19AE35DE004F3C2F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DD195E19AE35DE004F3C2F /* AVFoundation.framework */; };
+		72F15A8F19E71618008331A7 /* FISJukeboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F15A8A19E71618008331A7 /* FISJukeboxViewController.m */; };
+		72F15A9019E71618008331A7 /* FISPlaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F15A8C19E71618008331A7 /* FISPlaylist.m */; };
+		72F15A9119E71618008331A7 /* FISSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F15A8E19E71618008331A7 /* FISSong.m */; };
 		836095CA0BA7143B33DEE520 /* libPods-JukeboxViewsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D243E15CEC3F26D0618321C7 /* libPods-JukeboxViewsTests.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +70,12 @@
 		72DD195519A66AEE004F3C2F /* gangsta_bleeding_love.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gangsta_bleeding_love.mp3; sourceTree = "<group>"; };
 		72DD195C19A66F3A004F3C2F /* bailando.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bailando.mp3; sourceTree = "<group>"; };
 		72DD195E19AE35DE004F3C2F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		72F15A8919E71618008331A7 /* FISJukeboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISJukeboxViewController.h; sourceTree = "<group>"; };
+		72F15A8A19E71618008331A7 /* FISJukeboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISJukeboxViewController.m; sourceTree = "<group>"; };
+		72F15A8B19E71618008331A7 /* FISPlaylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISPlaylist.h; sourceTree = "<group>"; };
+		72F15A8C19E71618008331A7 /* FISPlaylist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISPlaylist.m; sourceTree = "<group>"; };
+		72F15A8D19E71618008331A7 /* FISSong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISSong.h; sourceTree = "<group>"; };
+		72F15A8E19E71618008331A7 /* FISSong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISSong.m; sourceTree = "<group>"; };
 		D243E15CEC3F26D0618321C7 /* libPods-JukeboxViewsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JukeboxViewsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -134,6 +143,12 @@
 			children = (
 				72DD192219A66296004F3C2F /* FISAppDelegate.h */,
 				72DD192319A66296004F3C2F /* FISAppDelegate.m */,
+				72F15A8919E71618008331A7 /* FISJukeboxViewController.h */,
+				72F15A8A19E71618008331A7 /* FISJukeboxViewController.m */,
+				72F15A8B19E71618008331A7 /* FISPlaylist.h */,
+				72F15A8C19E71618008331A7 /* FISPlaylist.m */,
+				72F15A8D19E71618008331A7 /* FISSong.h */,
+				72F15A8E19E71618008331A7 /* FISSong.m */,
 				72DD192519A66296004F3C2F /* Main.storyboard */,
 				72DD192B19A66296004F3C2F /* Images.xcassets */,
 				72DD191A19A66296004F3C2F /* Supporting Files */,
@@ -332,8 +347,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F15A9019E71618008331A7 /* FISPlaylist.m in Sources */,
 				72DD192019A66296004F3C2F /* main.m in Sources */,
+				72F15A8F19E71618008331A7 /* FISJukeboxViewController.m in Sources */,
 				72DD192419A66296004F3C2F /* FISAppDelegate.m in Sources */,
+				72F15A9119E71618008331A7 /* FISSong.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,7 +522,6 @@
 		};
 		72DD194719A66296004F3C2F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 618C04B2151A5A26B1487B1B /* Pods-JukeboxViewsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JukeboxViews.app/JukeboxViews";
 				FRAMEWORK_SEARCH_PATHS = (
