@@ -526,6 +526,7 @@
 		};
 		72DD194719A66296004F3C2F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 618C04B2151A5A26B1487B1B /* Pods-JukeboxViewsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JukeboxViews.app/JukeboxViews";
 				FRAMEWORK_SEARCH_PATHS = (
