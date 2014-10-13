@@ -29,6 +29,8 @@
 		72F15A8F19E71618008331A7 /* FISJukeboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F15A8A19E71618008331A7 /* FISJukeboxViewController.m */; };
 		72F15A9019E71618008331A7 /* FISPlaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F15A8C19E71618008331A7 /* FISPlaylist.m */; };
 		72F15A9119E71618008331A7 /* FISSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F15A8E19E71618008331A7 /* FISSong.m */; };
+		72F15A9319E71FF9008331A7 /* FISSongSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F15A9219E71FF9008331A7 /* FISSongSpec.m */; };
+		72F5811519E737430059B0B6 /* FISPlaylistSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F5811419E737430059B0B6 /* FISPlaylistSpec.m */; };
 		836095CA0BA7143B33DEE520 /* libPods-JukeboxViewsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D243E15CEC3F26D0618321C7 /* libPods-JukeboxViewsTests.a */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,8 @@
 		72F15A8C19E71618008331A7 /* FISPlaylist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISPlaylist.m; sourceTree = "<group>"; };
 		72F15A8D19E71618008331A7 /* FISSong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISSong.h; sourceTree = "<group>"; };
 		72F15A8E19E71618008331A7 /* FISSong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISSong.m; sourceTree = "<group>"; };
+		72F15A9219E71FF9008331A7 /* FISSongSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISSongSpec.m; sourceTree = "<group>"; };
+		72F5811419E737430059B0B6 /* FISPlaylistSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISPlaylistSpec.m; sourceTree = "<group>"; };
 		D243E15CEC3F26D0618321C7 /* libPods-JukeboxViewsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JukeboxViewsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -170,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				72DD193919A66296004F3C2F /* Supporting Files */,
+				72F15A9219E71FF9008331A7 /* FISSongSpec.m */,
+				72F5811419E737430059B0B6 /* FISPlaylistSpec.m */,
 			);
 			path = JukeboxViewsTests;
 			sourceTree = "<group>";
@@ -356,6 +362,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F15A9319E71FF9008331A7 /* FISSongSpec.m in Sources */,
+				72F5811519E737430059B0B6 /* FISPlaylistSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

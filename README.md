@@ -44,7 +44,7 @@ A class to contain a list of songs, with some convienance methods.
 - (void)sortSongsByArtist;
 ```
     
-  * Should sort the songs array alphabetically ascending by artist. If two songs have the same Artist, then they should be sorted alphabetically ascending by album.
+  * Should sort the songs array alphabetically ascending by artist. If two songs have the same Artist, then they should be sorted alphabetically ascending by album, and then alphabetically ascending by song title.
 
 ```
 - (void)sortSongsByAlbum;
@@ -62,7 +62,7 @@ A class to contain a list of songs, with some convienance methods.
 - (FISSong *)songAtPosition:(NSNumber *)position;
 ```
     
-  * Returns the song at the position given. This should not start from 0, it should start at 1 because we are humans!
+  * Returns the song at the position given. This should not start from 0, it should start at 1 because we are humans! If the position given is invalid, we should return nil.
 
 ## The View
 
