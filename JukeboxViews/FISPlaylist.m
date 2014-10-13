@@ -21,19 +21,19 @@
 
 -(NSMutableArray *)songs
 {
-//    uncomment below if you just want to run the jukebox (not testing) and have the included songs set up automatically
+//    the funky part of the if statement below checks to see if we're testing or just running the program. this should actually be put into a preprocessor macro
     
-//    if (!_songs) {
-//        
-//        FISSong *song1 = [[FISSong alloc] initWithTitle:@"Hold on Be Strong" artist:@"Matoma vs Big Poppa" album:@"The Internet 1" andFileName:@"hold_on_be_strong"];
-//        FISSong *song2 = [[FISSong alloc] initWithTitle:@"Higher Love" artist:@"Matoma ft. James Vincent McMorrow" album:@"The Internet 2" andFileName:@"higher_love"];
-//        FISSong *song3 = [[FISSong alloc] initWithTitle:@"Mo Money Mo Problems" artist:@"Matoma ft. The Notorious B.I.G." album:@"The Internet 3" andFileName:@"mo_money_mo_problems"];
-//        FISSong *song4 = [[FISSong alloc] initWithTitle:@"Old Thing Back" artist:@"The Notorious B.I.G." album:@"The Internet 4" andFileName:@"old_thing_back"];
-//        FISSong *song5 = [[FISSong alloc] initWithTitle:@"Gangsta Bleeding Love" artist:@"Matoma" album:@"The Internet 5" andFileName:@"gangsta_bleeding_love"];
-//        FISSong *song6 = [[FISSong alloc] initWithTitle:@"Bailando" artist:@"Enrique Iglesias ft. Sean Paul" album:@"The Internet 6" andFileName:@"bailando"];
-//        
-//        _songs = [[NSMutableArray alloc] initWithArray:@[song1, song2, song3, song4, song5, song6]];
-//    }
+    if (_songs.count == 0 && ![[[NSProcessInfo processInfo] environment] objectForKey:@"XCInjectBundle"]) {
+        
+        FISSong *song1 = [[FISSong alloc] initWithTitle:@"Hold on Be Strong" artist:@"Matoma vs Big Poppa" album:@"The Internet 1" andFileName:@"hold_on_be_strong"];
+        FISSong *song2 = [[FISSong alloc] initWithTitle:@"Higher Love" artist:@"Matoma ft. James Vincent McMorrow" album:@"The Internet 2" andFileName:@"higher_love"];
+        FISSong *song3 = [[FISSong alloc] initWithTitle:@"Mo Money Mo Problems" artist:@"Matoma ft. The Notorious B.I.G." album:@"The Internet 3" andFileName:@"mo_money_mo_problems"];
+        FISSong *song4 = [[FISSong alloc] initWithTitle:@"Old Thing Back" artist:@"The Notorious B.I.G." album:@"The Internet 4" andFileName:@"old_thing_back"];
+        FISSong *song5 = [[FISSong alloc] initWithTitle:@"Gangsta Bleeding Love" artist:@"Matoma" album:@"The Internet 5" andFileName:@"gangsta_bleeding_love"];
+        FISSong *song6 = [[FISSong alloc] initWithTitle:@"Bailando" artist:@"Enrique Iglesias ft. Sean Paul" album:@"The Internet 6" andFileName:@"bailando"];
+        
+        _songs = [[NSMutableArray alloc] initWithArray:@[song1, song2, song3, song4, song5, song6]];
+    }
     
     return _songs;
 }
