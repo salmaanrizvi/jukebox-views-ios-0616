@@ -68,7 +68,7 @@ A class to contain a list of songs, with some convienance methods.
 
 This is what the view should look like:
 
-![](screenshot.png?raw=true)
+![](https://ironboard-curriculum-content.s3.amazonaws.com/iOS/screenshot.png)
 
 So that's two `UIButton`s, one `UITextField` and one `UITextView`. Note that it's a `UITextView` not a `UILabel` because `UITextView`s handle multi line text a lot easier.
 
