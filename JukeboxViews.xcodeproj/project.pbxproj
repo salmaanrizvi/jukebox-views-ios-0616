@@ -26,9 +26,6 @@
 		72DD195A19A66AEE004F3C2F /* gangsta_bleeding_love.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 72DD195519A66AEE004F3C2F /* gangsta_bleeding_love.mp3 */; };
 		72DD195D19A66F3A004F3C2F /* bailando.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 72DD195C19A66F3A004F3C2F /* bailando.mp3 */; };
 		72DD195F19AE35DE004F3C2F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DD195E19AE35DE004F3C2F /* AVFoundation.framework */; };
-		72F15A8F19E71618008331A7 /* FISJukeboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F15A8A19E71618008331A7 /* FISJukeboxViewController.m */; };
-		72F15A9019E71618008331A7 /* FISPlaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F15A8C19E71618008331A7 /* FISPlaylist.m */; };
-		72F15A9119E71618008331A7 /* FISSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F15A8E19E71618008331A7 /* FISSong.m */; };
 		72F15A9319E71FF9008331A7 /* FISSongSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F15A9219E71FF9008331A7 /* FISSongSpec.m */; };
 		72F5811519E737430059B0B6 /* FISPlaylistSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F5811419E737430059B0B6 /* FISPlaylistSpec.m */; };
 		836095CA0BA7143B33DEE520 /* libPods-JukeboxViewsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D243E15CEC3F26D0618321C7 /* libPods-JukeboxViewsTests.a */; };
@@ -70,12 +67,6 @@
 		72DD195519A66AEE004F3C2F /* gangsta_bleeding_love.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gangsta_bleeding_love.mp3; sourceTree = "<group>"; };
 		72DD195C19A66F3A004F3C2F /* bailando.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bailando.mp3; sourceTree = "<group>"; };
 		72DD195E19AE35DE004F3C2F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		72F15A8919E71618008331A7 /* FISJukeboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISJukeboxViewController.h; sourceTree = "<group>"; };
-		72F15A8A19E71618008331A7 /* FISJukeboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISJukeboxViewController.m; sourceTree = "<group>"; };
-		72F15A8B19E71618008331A7 /* FISPlaylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISPlaylist.h; sourceTree = "<group>"; };
-		72F15A8C19E71618008331A7 /* FISPlaylist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISPlaylist.m; sourceTree = "<group>"; };
-		72F15A8D19E71618008331A7 /* FISSong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISSong.h; sourceTree = "<group>"; };
-		72F15A8E19E71618008331A7 /* FISSong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISSong.m; sourceTree = "<group>"; };
 		72F15A9219E71FF9008331A7 /* FISSongSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISSongSpec.m; sourceTree = "<group>"; };
 		72F5811419E737430059B0B6 /* FISPlaylistSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISPlaylistSpec.m; sourceTree = "<group>"; };
 		D243E15CEC3F26D0618321C7 /* libPods-JukeboxViewsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JukeboxViewsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -428,7 +419,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -460,7 +451,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -474,6 +465,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JukeboxViews/JukeboxViews-Prefix.pch";
 				INFOPLIST_FILE = "JukeboxViews/JukeboxViews-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -487,6 +479,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JukeboxViews/JukeboxViews-Prefix.pch";
 				INFOPLIST_FILE = "JukeboxViews/JukeboxViews-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
