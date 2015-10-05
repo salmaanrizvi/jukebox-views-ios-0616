@@ -18,16 +18,16 @@ describe(@"FISPlaylist", ^{
     
     beforeAll(^{
         playlist = [[FISPlaylist alloc] init];
-        song1 = [[FISSong alloc] initWithTitle:@"Dancing in the Moonlight" artist:@"Thin Lizzy" album:@"Bad Reputation" andFileName:@"thin_lizzy_dancing.mp3"];
+        song1 = [[FISSong alloc] initWithTitle:@"Dancing in the Moonlight" artist:@"Thin Lizzy" album:@"Bad Reputation" fileName:@"thin_lizzy_dancing.mp3"];
         
-        song2 = [[FISSong alloc] initWithTitle:@"Dancing in the Moonlight" artist:@"King Harvest" album:@"Dancing in the Moonlight" andFileName:@"king_harvest_dancing.mp3"];
+        song2 = [[FISSong alloc] initWithTitle:@"Dancing in the Moonlight" artist:@"King Harvest" album:@"Dancing in the Moonlight" fileName:@"king_harvest_dancing.mp3"];
         
         song3 = [[FISSong alloc] init];
         song3.artist = @"Thin Lizzy";
         song3.title = @"Jailbreak";
         song3.album = @"Jailbreak";
         song3.fileName = @"jailbreak.mp3";
-        song4 = [[FISSong alloc] initWithTitle:@"Cowboy Song" artist:@"Thin Lizzy" album:@"Jailbreak" andFileName:@"cowboy_song.mp3"];
+        song4 = [[FISSong alloc] initWithTitle:@"Cowboy Song" artist:@"Thin Lizzy" album:@"Jailbreak" fileName:@"cowboy_song.mp3"];
         
     });
     
@@ -79,11 +79,11 @@ describe(@"FISPlaylist", ^{
     
     describe(@"songAtPosition", ^{
         it(@"should return the song at the position given. This should not start from 0, it should start at 1 because we are humans!",^{
-            expect([playlist songAtPosition:@3]).to.equal(song3);
+            expect([playlist songForTrackNumber:3]).to.equal(song3);
         });
         
         it(@"should return nil if an invalid position is entered",^{
-            expect([playlist songAtPosition:@0]).to.beNil();
+            expect([playlist songForTrackNumber:0]).to.beNil();
         });
     });
     

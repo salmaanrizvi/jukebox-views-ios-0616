@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D3DF63D1BC31CC10047AB5C /* FISJukeboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3DF6381BC31CC10047AB5C /* FISJukeboxViewController.m */; settings = {ASSET_TAGS = (); }; };
+		4D3DF63E1BC31CC10047AB5C /* FISPlaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3DF63A1BC31CC10047AB5C /* FISPlaylist.m */; settings = {ASSET_TAGS = (); }; };
+		4D3DF63F1BC31CC10047AB5C /* FISSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3DF63C1BC31CC10047AB5C /* FISSong.m */; settings = {ASSET_TAGS = (); }; };
 		72DD191419A66296004F3C2F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DD191319A66296004F3C2F /* Foundation.framework */; };
 		72DD191619A66296004F3C2F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DD191519A66296004F3C2F /* CoreGraphics.framework */; };
 		72DD191819A66296004F3C2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DD191719A66296004F3C2F /* UIKit.framework */; };
@@ -42,6 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D3DF6371BC31CC10047AB5C /* FISJukeboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISJukeboxViewController.h; sourceTree = "<group>"; };
+		4D3DF6381BC31CC10047AB5C /* FISJukeboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISJukeboxViewController.m; sourceTree = "<group>"; };
+		4D3DF6391BC31CC10047AB5C /* FISPlaylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISPlaylist.h; sourceTree = "<group>"; };
+		4D3DF63A1BC31CC10047AB5C /* FISPlaylist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISPlaylist.m; sourceTree = "<group>"; };
+		4D3DF63B1BC31CC10047AB5C /* FISSong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISSong.h; sourceTree = "<group>"; };
+		4D3DF63C1BC31CC10047AB5C /* FISSong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISSong.m; sourceTree = "<group>"; };
 		55CEF501CDA5DA8D0F8938FA /* Pods-JukeboxViewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JukeboxViewsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JukeboxViewsTests/Pods-JukeboxViewsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		618C04B2151A5A26B1487B1B /* Pods-JukeboxViewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JukeboxViewsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JukeboxViewsTests/Pods-JukeboxViewsTests.release.xcconfig"; sourceTree = "<group>"; };
 		72DD191019A66296004F3C2F /* JukeboxViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JukeboxViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,12 +145,12 @@
 			children = (
 				72DD192219A66296004F3C2F /* FISAppDelegate.h */,
 				72DD192319A66296004F3C2F /* FISAppDelegate.m */,
-				72F15A8919E71618008331A7 /* FISJukeboxViewController.h */,
-				72F15A8A19E71618008331A7 /* FISJukeboxViewController.m */,
-				72F15A8B19E71618008331A7 /* FISPlaylist.h */,
-				72F15A8C19E71618008331A7 /* FISPlaylist.m */,
-				72F15A8D19E71618008331A7 /* FISSong.h */,
-				72F15A8E19E71618008331A7 /* FISSong.m */,
+				4D3DF6371BC31CC10047AB5C /* FISJukeboxViewController.h */,
+				4D3DF6381BC31CC10047AB5C /* FISJukeboxViewController.m */,
+				4D3DF6391BC31CC10047AB5C /* FISPlaylist.h */,
+				4D3DF63A1BC31CC10047AB5C /* FISPlaylist.m */,
+				4D3DF63B1BC31CC10047AB5C /* FISSong.h */,
+				4D3DF63C1BC31CC10047AB5C /* FISSong.m */,
 				72DD192519A66296004F3C2F /* Main.storyboard */,
 				72DD192B19A66296004F3C2F /* Images.xcassets */,
 				72DD191A19A66296004F3C2F /* Supporting Files */,
@@ -341,11 +350,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72F15A9019E71618008331A7 /* FISPlaylist.m in Sources */,
+				4D3DF63E1BC31CC10047AB5C /* FISPlaylist.m in Sources */,
 				72DD192019A66296004F3C2F /* main.m in Sources */,
-				72F15A8F19E71618008331A7 /* FISJukeboxViewController.m in Sources */,
+				4D3DF63D1BC31CC10047AB5C /* FISJukeboxViewController.m in Sources */,
 				72DD192419A66296004F3C2F /* FISAppDelegate.m in Sources */,
-				72F15A9119E71618008331A7 /* FISSong.m in Sources */,
+				4D3DF63F1BC31CC10047AB5C /* FISSong.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

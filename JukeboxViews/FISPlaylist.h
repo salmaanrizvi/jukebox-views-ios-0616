@@ -17,6 +17,6 @@
 -(void)sortSongsByArtist;
 -(void)sortSongsByAlbum;
 -(NSString *)description;
--(FISSong *)songAtPosition:(NSNumber *)position;
+-(FISSong *)songForTrackNumber:(NSUInteger)trackNumber;
 
 @end

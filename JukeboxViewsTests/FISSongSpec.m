@@ -14,7 +14,7 @@ describe(@"FISSong", ^{
     __block FISSong *song;
     
     beforeAll(^{
-        song = [[FISSong alloc] initWithTitle:@"Hold on Be Strong" artist:@"Matoma vs Big Poppa" album:@"The Internet 1" andFileName:@"hold_on_be_strong"];
+        song = [[FISSong alloc] initWithTitle:@"Hold on Be Strong" artist:@"Matoma vs Big Poppa" album:@"The Internet 1" fileName:@"hold_on_be_strong"];
     });
     
     describe(@"designated initializer", ^{

@@ -66,14 +66,16 @@
 
 
 - (IBAction)playButtonTapped:(id)sender {
-    NSNumber *songNumber = [NSNumber numberWithInteger:[self.songSelectorField.text integerValue]];
-    FISSong *selectedSong = [self.playlist songAtPosition:songNumber];
+    NSUInteger trackNumber = [self.songSelectorField.text integerValue];
+    FISSong *selectedSong = [self.playlist songForTrackNumber:trackNumber];
+    
     if (selectedSong) {
         [self setupAVAudioPlayWithFileName:selectedSong.fileName];
         [self.audioPlayer play];
     } else {
         self.songSelectorField.text = nil;
     }
+    
     [self dismissKeyboard];
 }
 

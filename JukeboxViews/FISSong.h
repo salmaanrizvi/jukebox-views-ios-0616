@@ -1,10 +1,4 @@
-//
-//  Song.h
-//  JukeboxViews
-//
-//  Created by Chris Gonzales on 8/21/14.
-//  Copyright (c) 2014 FIS. All rights reserved.
-//
+//  FISSong.h
 
 #import <Foundation/Foundation.h>
 
@@ -15,5 +9,9 @@
 @property (strong, nonatomic) NSString *album;
 @property (strong, nonatomic) NSString *fileName;
 
--(instancetype)initWithTitle:(NSString *)title artist:(NSString *)artist album:(NSString *)album andFileName:(NSString *)fileName;
+-(instancetype)initWithTitle:(NSString *)title
+                      artist:(NSString *)artist
+                       album:(NSString *)album
+                    fileName:(NSString *)fileName;
+
 @end
