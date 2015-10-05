@@ -1,10 +1,4 @@
-//
 //  FISSongSpec.m
-//  JukeboxViews
-//
-//  Created by Chris Gonzales on 10/9/14.
-//  Copyright 2014 FIS. All rights reserved.
-//
 
 #import "Specta.h"
 #import "FISSong.h"
