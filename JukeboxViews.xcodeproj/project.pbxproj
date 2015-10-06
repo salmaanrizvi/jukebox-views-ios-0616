@@ -174,8 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				72DD193919A66296004F3C2F /* Supporting Files */,
-				72F15A9219E71FF9008331A7 /* FISSongSpec.m */,
 				72F5811419E737430059B0B6 /* FISPlaylistSpec.m */,
+				72F15A9219E71FF9008331A7 /* FISSongSpec.m */,
 			);
 			path = JukeboxViewsTests;
 			sourceTree = "<group>";

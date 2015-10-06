@@ -9,9 +9,9 @@
 @property (strong, nonatomic) NSString *album;
 @property (strong, nonatomic) NSString *fileName;
 
--(instancetype)initWithTitle:(NSString *)title
-                      artist:(NSString *)artist
-                       album:(NSString *)album
-                    fileName:(NSString *)fileName;
+- (instancetype)initWithTitle:(NSString *)title
+                       artist:(NSString *)artist
+                        album:(NSString *)album
+                     fileName:(NSString *)fileName;
 
 @end

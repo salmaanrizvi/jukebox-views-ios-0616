@@ -1,10 +1,4 @@
-//
 //  FISJukeboxViewController.m
-//  JukeboxViews
-//
-//  Created by Chris Gonzales on 8/21/14.
-//  Copyright (c) 2014 FIS. All rights reserved.
-//
 
 #import "FISJukeboxViewController.h"
 #import "FISPlaylist.h"
@@ -32,7 +26,7 @@
 -(void)setup
 {
     self.playlist = [[FISPlaylist alloc] init];
-    self.playlistView.text = self.playlist.description;
+    self.playlistView.text = self.playlist.text;
 }
 
 -(void)dismissKeyboard
@@ -55,10 +49,8 @@
     self.audioPlayer = [[AVAudioPlayer alloc]
                     initWithContentsOfURL:url
                     error:&error];
-    if (error)
-    {
-        NSLog(@"Error in audioPlayer: %@",
-              [error localizedDescription]);
+    if (error) {
+        NSLog(@"Error in audioPlayer: %@", [error localizedDescription]);
     } else {
         [self.audioPlayer prepareToPlay];
     }

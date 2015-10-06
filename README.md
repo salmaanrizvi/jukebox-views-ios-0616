@@ -1,29 +1,31 @@
+# Jukebox Views
 
-# There are no tests for this one... have fun :)
+## Objectives
 
-# Jukebox
+1. Connect custom data classes into a view controller.
+2. Use the `AVAudioPlayer` class to play audio files.
 
-The goal of this lab is to make a simple Jukebox.
+## Introduction
 
-## The Models
+In this lab, you're going to hook up some audio files to a view controller that will allow a user to select a song from a list and playback the associated audio track. First, you're going to set up the data models for holding the information at run time. Then, you'll connect the data models to a view controller than will make the songs interactive to the user.
 
-### Song
+## Instructions
 
-#### Properties
+### The Data Models
 
-  * Title
-  * Artist
-  * Album
-  * File Name
-    * File name of mp3 file, without mp3 extension.
+There are two classes that you will need to set according to the provided test files, `FISSong` and `FISPlaylist`. The `FISSong` class is simply a data model for holding title, artist, album, and filename information for an mp3 file. The `FISPlaylist` class contains an array of songs, and will need to be set up with some methods for sorting and accessing the information in that array.
 
-#### Methods
+#### `FISSong`
 
-  * none!
+1. Create the class files for `FISSong`. It should inherit from `NSObject` and contain four string properties called `title`, `artist`, `album`, and `fileName`.
 
-### Playlist
+2. Declare a designated initializer that covers these four properties in that order.
 
-A class to contain a list of songs, with some convienance methods.
+3. Override the default initializer to call the designated initializer with empty strings submitted as all four arguments. Verify that the tests for `FISSong` all pass before moving on.
+
+#### `FISPlaylist`
+
+A class to contain a list of songs, with some conveniance methods.
 
 #### Properties
 

@@ -4,12 +4,19 @@
 
 @implementation FISSong
 
+- (instancetype)init
+{
+    self = [self initWithTitle:@"" artist:@"" album:@"" fileName:@""];
+    return self;
+}
+
 - (instancetype)initWithTitle:(NSString *)title
                        artist:(NSString *)artist
                         album:(NSString *)album
                      fileName:(NSString *)fileName
 {
     self = [super init];
+    
     if (self) {
         _title = title;
         _artist = artist;
@@ -19,9 +26,5 @@
     return self;
 }
 
--(instancetype)init
-{
-    return [self initWithTitle:@"" artist:@"" album:@"" fileName:@""];
-}
 @end
 
