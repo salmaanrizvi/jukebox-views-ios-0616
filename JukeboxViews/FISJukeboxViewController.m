@@ -17,27 +17,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
-    [self.view addGestureRecognizer:tap];
     
-    [self setup];
-}
-
--(void)setup
-{
     self.playlist = [[FISPlaylist alloc] init];
     self.playlistView.text = self.playlist.text;
-}
-
--(void)dismissKeyboard
-{
-    [self.songSelectorField resignFirstResponder];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)setupAVAudioPlayWithFileName:(NSString *)fileName
@@ -67,13 +49,25 @@
     } else {
         self.songSelectorField.text = nil;
     }
-    
-    [self dismissKeyboard];
 }
 
 - (IBAction)stopButtonTapped:(id)sender {
-    [self dismissKeyboard];
     [self.audioPlayer stop];
+}
+
+- (IBAction)titleTapped:(id)sender {
+    [self.playlist sortSongsByTitle];
+    self.playlistView.text = self.playlist.text;
+}
+
+- (IBAction)artistTapped:(id)sender {
+    [self.playlist sortSongsByArtist];
+    self.playlistView.text = self.playlist.text;
+}
+
+- (IBAction)albumTapped:(id)sender {
+    [self.playlist sortSongsByAlbum];
+    self.playlistView.text = self.playlist.text;
 }
 
 @end
