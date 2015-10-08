@@ -2,8 +2,8 @@
 
 ## Objectives
 
-1. Connect custom data classes into a view controller.
-2. Use `IBAction`s to call methods on custom classes, and to set labels with output strings.
+1. Use custom data classes in a view controller.
+2. Use `IBAction`s to trigger methods on view controllers, and `IBOutlets` to set labels with output strings.
 3. Use the `AVAudioPlayer` class to play audio files.
 
 ## Introduction
@@ -27,14 +27,13 @@ There are two classes that you will need to set up according to the provided tes
 #### `FISPlaylist`
 
 1 — Create the class files for `FISPlaylist`. It should inherit from `NSObject` and contain two properties, a mutable array called `songs` and a string called `text`. Declare the following methods:
-  * `textForSongs` which returns an `NSString`,
   * `sortByTitle` which provides no return,
   * `sortByArtist`, which provides no return,
   * `sortByAlbum`, which provides no return, and
   * `songForTrackNumber:` which takes one `NSUInteger` argument and returns a `FISSong` object.  
   Define the methods to default implementations and run the tests.
   
-2 — Override the default initializer. It should set the `songs` array to the result of the following `generateSongObjects method:
+2 — Override the default initializer. It should set the `songs` array to the result of the following `generateSongObjects method below (we'll save you some typing):
 
 ```objc
 - (NSMutableArray *)generateSongObjects
@@ -74,9 +73,8 @@ There are two classes that you will need to set up according to the provided tes
     return songs;
 }
 ```
-It should also set the `text` string to the result of calling `textForSongs` on `self`.
 
-3 — Write the implementation for `textForSongs`. It should format the information in each song in the `songs` arrays to match the following format:
+3 — Write some code that sets up the `text` property. Think about where this belongs -- you'll need to call it after the `songs` array is initialized. It should format the information in each song in the `songs` arrays to match the following format:
 
 ```
 1. (Title) Hold on Be Strong (Artist) Matoma vs Big Poppa (Album) The Internet 1\n
@@ -105,9 +103,9 @@ The view controller is already laid out for you with a "Play" button, a text fie
 
 1. Create a subclass of `UIViewController` called `FISJukeboxViewController`.
 
-2. Add a `FISPlaylist` property called `playlist`. Connect the text field and text view properties to the class file, and connect the "play" and "stop" button actions.
+2. Add a `FISPlaylist` property called `playlist`. Connect the text field and text view properties to the class file, and connect the "play" and "stop" buttons to actions.
 
-3. In the `viewDidLoad` method (*after the super loads*), set the `playlist` property to a default instance of `FISPlaylist`. Set the textview's `text` property to the `playlist`'s text property.
+3. In the `viewDidLoad` method (*after a call to `[super viewDidLoad]`*), set the `playlist` property to a default instance of `FISPlaylist`. Set the textview's `text` property to the `playlist`'s text property.
 
 4. The basic flow of the app is the user can put in a number in the `UITextField` that corresponds to a song in the song listing and then hit play and that song will be played. For the first version of the app, just `NSLog()` the information of the song to be played.
 
@@ -122,7 +120,7 @@ Once the `NSLog()`s are working, you can set up an audio player to actually play
   3. Copy this method into the view controller's implementation:
 
   ```objc
-  - (void)setupAVAudioPlayWithFileName:(NSString *)fileName
+  - (void)setUpAVAudioPlayerWithFileName:(NSString *)fileName
   {
       NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                            pathForResource:fileName
@@ -131,7 +129,7 @@ Once the `NSLog()`s are working, you can set up an audio player to actually play
       self.audioPlayer = [[AVAudioPlayer alloc]
                       initWithContentsOfURL:url
                       error:&error];
-      if (error)
+      if (!self.audioPlayer)
       {
           NSLog(@"Error in audioPlayer: %@",
                 [error localizedDescription]);
@@ -141,11 +139,7 @@ Once the `NSLog()`s are working, you can set up an audio player to actually play
   }
   ```
 
-  4. Rewrite the implementation for the "Play" button's IBAction. Use the `songForTrackNumber:` method get the song object for a digit entered by the user in the text field. To prepare a song to be played, call the `setupAVAudioPlayWithFileName:` on self with the song's `fileName` string passed in as the argument. To have the `audioPlayer` object play the file that is prepared, call its `play` method.
-  
-  ```
-  [self.audioPlayer play];
-  ```
+  4. Rewrite the implementation for the "Play" button's IBAction. Use the `songForTrackNumber:` method get the song object for a digit entered by the user in the text field. To prepare a song to be played, call `setUpAVAudioPlayerWithFileName:` with the song's `fileName`. Then, to actually pay the song, call the `audioPlayer`'s `play` method.
   
   5. Now write the implementation for the "Stop" button's IBAction to call the `stop` method on the `self.audioPlayer` object.
 
