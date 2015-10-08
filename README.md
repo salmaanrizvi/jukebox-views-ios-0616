@@ -95,7 +95,7 @@ All the tests for `FISPlaylist` should now pass.
 
 ### The Storyboard
 
-The view controller is already laid out for you with a "Play" button, a text field for entering a song number, a "Stop" button, and a text view for displaying the playlist's text.
+The storyboard file contains an empty view controller. Add and connect two `UIButtons` that will "play" and "stop" an audio file, a `UITextField` for collecting a song number from the user, and a `UITextView` for displaying the playlist's contents to the user. You might lay them out something like this:
 
 ![](https://curriculum-content.s3.amazonaws.com/ios-inheritance-unit/jukebox_storyboard.png)
 
