@@ -1,95 +1,133 @@
-//
 //  FISPlaylistSpec.m
-//  JukeboxViews
-//
-//  Created by Chris Gonzales on 10/9/14.
-//  Copyright 2014 FIS. All rights reserved.
-//
 
 #import "Specta.h"
-#import "FISPlaylist.h"
 #define EXP_SHORTHAND
 #import "Expecta.h"
-
+#import "FISPlaylist.h"
 
 SpecBegin(FISPlaylist)
 
 describe(@"FISPlaylist", ^{
     
-    __block FISPlaylist *playlist;
-    __block FISSong *song1;
-    __block FISSong *song2;
-    __block FISSong *song3;
-    __block FISSong *song4;
+    __block FISPlaylist *defaultPlaylist;
+    __block FISPlaylist *sortPlaylist;
+    
+    __block FISSong *holdOnBeStrong;
+    __block FISSong *higherLove;
+    __block FISSong *moMoney;
+    __block FISSong *oldThingBack;
+    __block FISSong *gangsta;
+    __block FISSong *bailando;
     
     beforeAll(^{
-        playlist = [[FISPlaylist alloc] init];
-        song1 = [[FISSong alloc] initWithTitle:@"Dancing in the Moonlight" artist:@"Thin Lizzy" album:@"Bad Reputation" andFileName:@"thin_lizzy_dancing.mp3"];
         
-        song2 = [[FISSong alloc] initWithTitle:@"Dancing in the Moonlight" artist:@"King Harvest" album:@"Dancing in the Moonlight" andFileName:@"king_harvest_dancing.mp3"];
+        holdOnBeStrong = [[FISSong alloc] initWithTitle:@"Hold on Be Strong"
+                                                 artist:@"Matoma vs Big Poppa"
+                                                  album:@"The Internet 1"
+                                               fileName:@"hold_on_be_strong" ];
         
-        song3 = [[FISSong alloc] init];
-        song3.artist = @"Thin Lizzy";
-        song3.title = @"Jailbreak";
-        song3.album = @"Jailbreak";
-        song3.fileName = @"jailbreak.mp3";
-        song4 = [[FISSong alloc] initWithTitle:@"Cowboy Song" artist:@"Thin Lizzy" album:@"Jailbreak" andFileName:@"cowboy_song.mp3"];
+        higherLove = [[FISSong alloc] initWithTitle:@"Higher Love"
+                                             artist:@"Matoma ft. James Vincent McMorrow"
+                                              album:@"The Internet 2"
+                                           fileName:@"higher_love" ];
         
+        moMoney = [[FISSong alloc] initWithTitle:@"Mo Money Mo Problems"
+                                          artist:@"Matoma ft. The Notorious B.I.G."
+                                           album:@"The Internet 3"
+                                        fileName:@"mo_money_mo_problems" ];
+        
+        oldThingBack = [[FISSong alloc] initWithTitle:@"Old Thing Back"
+                                               artist:@"The Notorious B.I.G."
+                                                album:@"The Internet 4"
+                                             fileName:@"old_thing_back" ];
+        
+        gangsta = [[FISSong alloc] initWithTitle:@"Gangsta Bleeding Love"
+                                          artist:@"Matoma"
+                                           album:@"The Internet 5"
+                                        fileName:@"gangsta_bleeding_love" ];
+        
+        bailando = [[FISSong alloc] initWithTitle:@"Bailando"
+                                           artist:@"Enrique Iglesias ft. Sean Paul"
+                                            album:@"The Internet 6"
+                                         fileName:@"bailando" ];
     });
     
     beforeEach(^{
         
-        playlist.songs = [NSMutableArray arrayWithObjects:song1, song2, song3, song4, nil];
+        defaultPlaylist = [[FISPlaylist alloc] init];
+        
+        sortPlaylist = [[FISPlaylist alloc] init];
+        sortPlaylist.songs = [ @[holdOnBeStrong, higherLove, moMoney, oldThingBack, gangsta, bailando] mutableCopy ];
         
     });
     
-    describe(@"songs", ^{
-        it(@"returns an NSMutableArray",^{
-            expect(playlist.songs).to.beKindOf([NSMutableArray class]);
-            expect(playlist.songs).to.respondTo(@selector(addObject:));
+    describe(@"default initializer", ^{
+        it(@"should generate six song objects held in the songs array", ^{
+            expect(defaultPlaylist.songs.count).to.equal(6);
         });
-        
-        it(@"can have songs added",^{
-            FISPlaylist *newPlaylist = [[FISPlaylist alloc] init];
-            [newPlaylist.songs addObjectsFromArray: @[song1, song2, song3]];
-            expect(newPlaylist.songs).to.equal(@[song1, song2, song3]);
+    });
+    
+    describe(@"text", ^{
+        it(@"should return a string representation of the playlist",^{
+            NSString *text = @"1. (Title) Hold on Be Strong (Artist) Matoma vs Big Poppa (Album) The Internet 1\n2. (Title) Higher Love (Artist) Matoma ft. James Vincent McMorrow (Album) The Internet 2\n3. (Title) Mo Money Mo Problems (Artist) Matoma ft. The Notorious B.I.G. (Album) The Internet 3\n4. (Title) Old Thing Back (Artist) The Notorious B.I.G. (Album) The Internet 4\n5. (Title) Gangsta Bleeding Love (Artist) Matoma (Album) The Internet 5\n6. (Title) Bailando (Artist) Enrique Iglesias ft. Sean Paul (Album) The Internet 6\n";
+            
+            expect(defaultPlaylist.text).to.equal(text);
         });
     });
     
     describe(@"sortSongsByTitle", ^{
-        it(@"Should sort the songs array alphabetically ascending by title. If two songs have the same title, then they should be sorted alphabetically ascending by artist.",^{
-            [playlist sortSongsByTitle];
-            expect(playlist.songs).to.equal(@[song4, song2, song1, song3]);
+        it(@"should sort the songs array alphabetically by title, and secondarily by artist",^{
+            [sortPlaylist sortSongsByTitle];
+            
+            expect(sortPlaylist.songs).to.equal(@[bailando, gangsta, higherLove, holdOnBeStrong, moMoney, oldThingBack]);
+        });
+        
+        it(@"should set the text property to the new order", ^{
+            NSString *text = @"1. (Title) Bailando (Artist) Enrique Iglesias ft. Sean Paul (Album) The Internet 6\n2. (Title) Gangsta Bleeding Love (Artist) Matoma (Album) The Internet 5\n3. (Title) Higher Love (Artist) Matoma ft. James Vincent McMorrow (Album) The Internet 2\n4. (Title) Hold on Be Strong (Artist) Matoma vs Big Poppa (Album) The Internet 1\n5. (Title) Mo Money Mo Problems (Artist) Matoma ft. The Notorious B.I.G. (Album) The Internet 3\n6. (Title) Old Thing Back (Artist) The Notorious B.I.G. (Album) The Internet 4\n";
+            [sortPlaylist sortSongsByTitle];
+            
+            expect(sortPlaylist.text).to.equal(text);
         });
     });
     
     describe(@"sortSongsByArtist", ^{
-        it(@"Should sort the songs array alphabetically ascending by artist. If two songs have the same Artist, then they should be sorted alphabetically ascending by album",^{
-            [playlist sortSongsByArtist];
-            expect(playlist.songs).to.equal(@[song2, song1, song4, song3]);
+        it(@"should sort the songs array alphabetically by artist, and secondarily by album",^{
+            [sortPlaylist sortSongsByArtist];
+            
+            expect(sortPlaylist.songs).to.equal(@[bailando, gangsta, higherLove, moMoney, holdOnBeStrong, oldThingBack]);
+        });
+        
+        it(@"should set the text property to the new order", ^{
+            NSString *text = @"1. (Title) Bailando (Artist) Enrique Iglesias ft. Sean Paul (Album) The Internet 6\n2. (Title) Gangsta Bleeding Love (Artist) Matoma (Album) The Internet 5\n3. (Title) Higher Love (Artist) Matoma ft. James Vincent McMorrow (Album) The Internet 2\n4. (Title) Mo Money Mo Problems (Artist) Matoma ft. The Notorious B.I.G. (Album) The Internet 3\n5. (Title) Hold on Be Strong (Artist) Matoma vs Big Poppa (Album) The Internet 1\n6. (Title) Old Thing Back (Artist) The Notorious B.I.G. (Album) The Internet 4\n";
+            [sortPlaylist sortSongsByArtist];
+            
+            expect(sortPlaylist.text).to.equal(text);
         });
     });
     
     describe(@"sortSongsByAlbum", ^{
-        it(@"Should sort the songs array alphabetically ascending by Album. If two songs have the same album, then they should be sorted alphabetically ascending by title.",^{
-            [playlist sortSongsByAlbum];
-            expect(playlist.songs).to.equal(@[song1, song2, song4, song3]);
+        it(@"should sort the songs array alphabetically by album, and secondarily by title.",^{
+            [sortPlaylist sortSongsByAlbum];
+            
+            expect(sortPlaylist.songs).to.equal(@[holdOnBeStrong, higherLove, moMoney, oldThingBack, gangsta, bailando]);
+        });
+        
+        it(@"should set the text property to the new order", ^{
+            NSString *text = @"1. (Title) Hold on Be Strong (Artist) Matoma vs Big Poppa (Album) The Internet 1\n2. (Title) Higher Love (Artist) Matoma ft. James Vincent McMorrow (Album) The Internet 2\n3. (Title) Mo Money Mo Problems (Artist) Matoma ft. The Notorious B.I.G. (Album) The Internet 3\n4. (Title) Old Thing Back (Artist) The Notorious B.I.G. (Album) The Internet 4\n5. (Title) Gangsta Bleeding Love (Artist) Matoma (Album) The Internet 5\n6. (Title) Bailando (Artist) Enrique Iglesias ft. Sean Paul (Album) The Internet 6\n";
+            [sortPlaylist sortSongsByAlbum];
+            
+            expect(sortPlaylist.text).to.equal(text);
         });
     });
     
-    describe(@"description", ^{
-        it(@"should return an NSString representation of the playlist. Remember \n can be used for new line.",^{
-            expect([playlist description]).to.equal(@"1. Title: Dancing in the Moonlight Artist: Thin Lizzy Album: Bad Reputation\n2. Title: Dancing in the Moonlight Artist: King Harvest Album: Dancing in the Moonlight\n3. Title: Jailbreak Artist: Thin Lizzy Album: Jailbreak\n4. Title: Cowboy Song Artist: Thin Lizzy Album: Jailbreak\n");
-        });
-    });
-    
-    describe(@"songAtPosition", ^{
-        it(@"should return the song at the position given. This should not start from 0, it should start at 1 because we are humans!",^{
-            expect([playlist songAtPosition:@3]).to.equal(song3);
+    describe(@"songForTrackNumber", ^{
+        it(@"should return the song 'Jailbreak' when the third track is requested",^{
+            expect([sortPlaylist songForTrackNumber:3]).to.equal(moMoney);
         });
         
         it(@"should return nil if an invalid position is entered",^{
-            expect([playlist songAtPosition:@0]).to.beNil();
+            expect([sortPlaylist songForTrackNumber:0]).to.beNil();
+            expect([sortPlaylist songForTrackNumber:7]).to.beNil();
         });
     });
     

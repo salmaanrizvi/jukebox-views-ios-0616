@@ -1,10 +1,4 @@
-//
 //  FISJukeboxViewController.m
-//  JukeboxViews
-//
-//  Created by Chris Gonzales on 8/21/14.
-//  Copyright (c) 2014 FIS. All rights reserved.
-//
 
 #import "FISJukeboxViewController.h"
 #import "FISPlaylist.h"
@@ -23,27 +17,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
-    [self.view addGestureRecognizer:tap];
     
-    [self setup];
-}
-
--(void)setup
-{
     self.playlist = [[FISPlaylist alloc] init];
-    self.playlistView.text = self.playlist.description;
-}
-
--(void)dismissKeyboard
-{
-    [self.songSelectorField resignFirstResponder];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.playlistView.text = self.playlist.text;
 }
 
 - (void)setupAVAudioPlayWithFileName:(NSString *)fileName
@@ -51,14 +27,10 @@
     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                          pathForResource:fileName
                                          ofType:@"mp3"]];
-    NSError *error;
-    self.audioPlayer = [[AVAudioPlayer alloc]
-                    initWithContentsOfURL:url
-                    error:&error];
-    if (error)
-    {
-        NSLog(@"Error in audioPlayer: %@",
-              [error localizedDescription]);
+    NSError *error = nil;
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    if (!self.audioPlayer) {
+        NSLog(@"Error in audioPlayer: %@", error.localizedDescription);
     } else {
         [self.audioPlayer prepareToPlay];
     }
@@ -66,20 +38,34 @@
 
 
 - (IBAction)playButtonTapped:(id)sender {
-    NSNumber *songNumber = [NSNumber numberWithInteger:[self.songSelectorField.text integerValue]];
-    FISSong *selectedSong = [self.playlist songAtPosition:songNumber];
+    NSUInteger trackNumber = [self.songSelectorField.text integerValue];
+    FISSong *selectedSong = [self.playlist songForTrackNumber:trackNumber];
+    
     if (selectedSong) {
         [self setupAVAudioPlayWithFileName:selectedSong.fileName];
         [self.audioPlayer play];
     } else {
         self.songSelectorField.text = nil;
     }
-    [self dismissKeyboard];
 }
 
 - (IBAction)stopButtonTapped:(id)sender {
-    [self dismissKeyboard];
     [self.audioPlayer stop];
+}
+
+- (IBAction)titleTapped:(id)sender {
+    [self.playlist sortSongsByTitle];
+    self.playlistView.text = self.playlist.text;
+}
+
+- (IBAction)artistTapped:(id)sender {
+    [self.playlist sortSongsByArtist];
+    self.playlistView.text = self.playlist.text;
+}
+
+- (IBAction)albumTapped:(id)sender {
+    [self.playlist sortSongsByAlbum];
+    self.playlistView.text = self.playlist.text;
 }
 
 @end
