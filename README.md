@@ -122,13 +122,9 @@ Once the `NSLog()`s are working, you can set up an audio player to actually play
   ```objc
   - (void)setUpAVAudioPlayerWithFileName:(NSString *)fileName
   {
-      NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                           pathForResource:fileName
-                                           ofType:@"mp3"]];
-      NSError *error;
-      self.audioPlayer = [[AVAudioPlayer alloc]
-                      initWithContentsOfURL:url
-                      error:&error];
+      NSURL *url = [[NSBundle mainBundle] URLForResource:fileName withExtension:@"mp3"];
+      NSError *error = nil;
+      self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
       if (!self.audioPlayer)
       {
           NSLog(@"Error in audioPlayer: %@",

@@ -27,12 +27,10 @@
     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                          pathForResource:fileName
                                          ofType:@"mp3"]];
-    NSError *error;
-    self.audioPlayer = [[AVAudioPlayer alloc]
-                    initWithContentsOfURL:url
-                    error:&error];
-    if (error) {
-        NSLog(@"Error in audioPlayer: %@", [error localizedDescription]);
+    NSError *error = nil;
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    if (!self.audioPlayer) {
+        NSLog(@"Error in audioPlayer: %@", error.localizedDescription);
     } else {
         [self.audioPlayer prepareToPlay];
     }
