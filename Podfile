@@ -12,6 +12,4 @@ target 'JukeboxViewsTests' do
   pod 'Expecta'
   pod 'KIF'
   pod 'Swizzlean'
-
 end
-
