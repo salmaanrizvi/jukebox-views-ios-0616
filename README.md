@@ -27,9 +27,9 @@ There are two classes that you will need to set up according to the provided tes
 #### `FISPlaylist`
 
 1 — Create the class files for `FISPlaylist`. It should inherit from `NSObject` and contain two properties, a mutable array called `songs` and a string called `text`. Declare the following methods:
-  * `sortByTitle` which provides no return,
-  * `sortByArtist`, which provides no return,
-  * `sortByAlbum`, which provides no return, and
+  * `sortSongsByTitle` which provides no return,
+  * `sortSongsByArtist`, which provides no return,
+  * `sortSongsByAlbum`, which provides no return, and
   * `songForTrackNumber:` which takes one `NSUInteger` argument and returns a `FISSong` object.  
   Define the methods to default implementations and run the tests.
   
