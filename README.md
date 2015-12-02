@@ -140,3 +140,5 @@ Once the `NSLog()`s are working, you can set up an audio player to actually play
   5. Now write the implementation for the "Stop" button's IBAction to call the `stop` method on the `self.audioPlayer` object.
 
   6. Run your jukebox in the simulator. Select a song to play and listen to your sound system churn out a sweet tune! (**Top-tip:** *Make sure your volume is on, but at a moderate level.*)
+
+<a href='https://learn.co/lessons/jukebox-views' data-visibility='hidden'>View this lesson on Learn.co</a>
