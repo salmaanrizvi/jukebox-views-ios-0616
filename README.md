@@ -141,4 +141,4 @@ Once the `NSLog()`s are working, you can set up an audio player to actually play
 
   6. Run your jukebox in the simulator. Select a song to play and listen to your sound system churn out a sweet tune! (**Top-tip:** *Make sure your volume is on, but at a moderate level.*)
 
-<a href='https://learn.co/lessons/jukebox-views' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/jukebox-views' title='Jukebox Views'>Jukebox Views</a> on Learn.co and start learning to code for free.</p>
