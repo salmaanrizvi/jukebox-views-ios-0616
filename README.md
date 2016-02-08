@@ -88,7 +88,7 @@ Don't forget the newline character at the end of the line.
   * `sortSongsByArtist` should sort the songs array alphabetically ascending by artist, and secondarily by album.
   * `sortSongsByAlbum` should sort the songs array alphabetically ascending by album, and secondarily by title.
 
-5 — Write the implementation for `songAtTrackNumber:`. It should return the song from the `songs` array at the correct track number (which begins at `1`, unlike indexes). If the argument is not a valid track number, this method should return `nil`.
+5 — Write the implementation for `songForTrackNumber:`. It should return the song from the `songs` array at the correct track number (which begins at `1`, unlike indexes). If the argument is not a valid track number, this method should return `nil`.
 
 All the tests for `FISPlaylist` should now pass.
 
@@ -141,4 +141,4 @@ Once the `NSLog()`s are working, you can set up an audio player to actually play
 
   6. Run your jukebox in the simulator. Select a song to play and listen to your sound system churn out a sweet tune! (**Top-tip:** *Make sure your volume is on, but at a moderate level.*)
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/jukebox-views' title='Jukebox Views'>Jukebox Views</a> on Learn.co and start learning to code for free.</p>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/jukebox-views'>(advanced) Jukebox Views</a> on Learn.co and start learning to code for free.</p>
