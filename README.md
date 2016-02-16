@@ -22,7 +22,7 @@ There are two classes that you will need to set up according to the provided tes
 
 2. Declare a designated initializer that covers these four properties in that order.
 
-3. Override the default initializer to call the designated initializer with empty strings submitted as all four arguments. Verify that the tests for `FISSong` pass before moving on.
+3. Override the default initializer to call the designated initializer with empty strings submitted as all four arguments.
 
 #### `FISPlaylist`
 
@@ -140,5 +140,7 @@ Once the `NSLog()`s are working, you can set up an audio player to actually play
   5. Now write the implementation for the "Stop" button's IBAction to call the `stop` method on the `self.audioPlayer` object.
 
   6. Run your jukebox in the simulator. Select a song to play and listen to your sound system churn out a sweet tune! (**Top-tip:** *Make sure your volume is on, but at a moderate level.*)
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/jukebox-views'>(advanced) Jukebox Views</a> on Learn.co and start learning to code for free.</p>
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/jukebox-views'>(advanced) Jukebox Views</a> on Learn.co and start learning to code for free.</p>
