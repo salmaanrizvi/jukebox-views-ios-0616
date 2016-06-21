@@ -1,0 +1,28 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B2DBC4E4ADC3E95872FD2E19ECC58A650E8C3FA0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B2DBC4E4ADC3E95872FD2E19ECC58A650E8C3FA0" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F5DD1F7E-49EE-4F95-95D4-10B9B3141604",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B2DBC4E4ADC3E95872FD2E19ECC58A650E8C3FA0" : "..\/Development\/labs\/jukebox-views-ios-0915"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "JukeboxViews",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "JukeboxViews.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:learn-co-curriculum\/jukebox-views.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B2DBC4E4ADC3E95872FD2E19ECC58A650E8C3FA0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:HaarisMuneer\/jukebox-views-ios-0915.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B2DBC4E4ADC3E95872FD2E19ECC58A650E8C3FA0"
+    }
+  ]
+}
