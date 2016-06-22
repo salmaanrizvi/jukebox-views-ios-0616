@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2BE5D07B1D1997860093EE69 /* FISJukeboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5D0761D1997860093EE69 /* FISJukeboxViewController.m */; };
-		2BE5D07C1D1997860093EE69 /* FISPlaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5D0781D1997860093EE69 /* FISPlaylist.m */; };
-		2BE5D07D1D1997860093EE69 /* FISSong.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5D07A1D1997860093EE69 /* FISSong.m */; };
+		2BFF18631D1AE2770004288E /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFF18611D1AE2770004288E /* libKIF.a */; };
+		2BFF18641D1AE2770004288E /* libSpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFF18621D1AE2770004288E /* libSpecta.a */; };
 		4D3DF6411BC4116A0047AB5C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D3DF6401BC4116A0047AB5C /* Launch Screen.storyboard */; };
 		55EE77C83CC34CEBB3C94B73 /* libPods-JukeboxViews-JukeboxViewsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F27DB2F389390A135062FE6E /* libPods-JukeboxViews-JukeboxViewsTests.a */; };
 		7114ED763005E27201EFAD77 /* libPods-JukeboxViews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E0C1B3483454C3095A81DBA /* libPods-JukeboxViews.a */; };
@@ -49,12 +48,10 @@
 
 /* Begin PBXFileReference section */
 		0713B2E933A29695981E0E27 /* Pods-JukeboxViews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JukeboxViews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JukeboxViews/Pods-JukeboxViews.debug.xcconfig"; sourceTree = "<group>"; };
-		2BE5D0751D1997860093EE69 /* FISJukeboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FISJukeboxViewController.h; path = "../../../Development/labs/jukebox-views-ios-0915/JukeboxViews/FISJukeboxViewController.h"; sourceTree = "<group>"; };
-		2BE5D0761D1997860093EE69 /* FISJukeboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FISJukeboxViewController.m; path = "../../../Development/labs/jukebox-views-ios-0915/JukeboxViews/FISJukeboxViewController.m"; sourceTree = "<group>"; };
-		2BE5D0771D1997860093EE69 /* FISPlaylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FISPlaylist.h; path = "../../../Development/labs/jukebox-views-ios-0915/JukeboxViews/FISPlaylist.h"; sourceTree = "<group>"; };
-		2BE5D0781D1997860093EE69 /* FISPlaylist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FISPlaylist.m; path = "../../../Development/labs/jukebox-views-ios-0915/JukeboxViews/FISPlaylist.m"; sourceTree = "<group>"; };
-		2BE5D0791D1997860093EE69 /* FISSong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FISSong.h; path = "../../../Development/labs/jukebox-views-ios-0915/JukeboxViews/FISSong.h"; sourceTree = "<group>"; };
-		2BE5D07A1D1997860093EE69 /* FISSong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FISSong.m; path = "../../../Development/labs/jukebox-views-ios-0915/JukeboxViews/FISSong.m"; sourceTree = "<group>"; };
+		2BFF18611D1AE2770004288E /* libKIF.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKIF.a; path = "Pods/../build/Debug-iphoneos/KIF/libKIF.a"; sourceTree = "<group>"; };
+		2BFF18621D1AE2770004288E /* libSpecta.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSpecta.a; path = "Pods/../build/Debug-iphoneos/Specta/libSpecta.a"; sourceTree = "<group>"; };
+		2BFF18651D1AE2840004288E /* libKIF.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKIF.a; path = "Pods/../build/Debug-iphoneos/KIF/libKIF.a"; sourceTree = "<group>"; };
+		2BFF18661D1AE2840004288E /* libSpecta.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSpecta.a; path = "Pods/../build/Debug-iphoneos/Specta/libSpecta.a"; sourceTree = "<group>"; };
 		2E0C1B3483454C3095A81DBA /* libPods-JukeboxViews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JukeboxViews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3DF6401BC4116A0047AB5C /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		72DD191019A66296004F3C2F /* JukeboxViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JukeboxViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BFF18631D1AE2770004288E /* libKIF.a in Frameworks */,
+				2BFF18641D1AE2770004288E /* libSpecta.a in Frameworks */,
 				72DD193319A66296004F3C2F /* XCTest.framework in Frameworks */,
 				72DD193519A66296004F3C2F /* UIKit.framework in Frameworks */,
 				72DD193419A66296004F3C2F /* Foundation.framework in Frameworks */,
@@ -140,6 +139,10 @@
 		72DD191219A66296004F3C2F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2BFF18651D1AE2840004288E /* libKIF.a */,
+				2BFF18661D1AE2840004288E /* libSpecta.a */,
+				2BFF18611D1AE2770004288E /* libKIF.a */,
+				2BFF18621D1AE2770004288E /* libSpecta.a */,
 				72DD195E19AE35DE004F3C2F /* AVFoundation.framework */,
 				72DD191319A66296004F3C2F /* Foundation.framework */,
 				72DD191519A66296004F3C2F /* CoreGraphics.framework */,
@@ -155,12 +158,6 @@
 		72DD191919A66296004F3C2F /* JukeboxViews */ = {
 			isa = PBXGroup;
 			children = (
-				2BE5D0751D1997860093EE69 /* FISJukeboxViewController.h */,
-				2BE5D0761D1997860093EE69 /* FISJukeboxViewController.m */,
-				2BE5D0771D1997860093EE69 /* FISPlaylist.h */,
-				2BE5D0781D1997860093EE69 /* FISPlaylist.m */,
-				2BE5D0791D1997860093EE69 /* FISSong.h */,
-				2BE5D07A1D1997860093EE69 /* FISSong.m */,
 				72DD192219A66296004F3C2F /* FISAppDelegate.h */,
 				72DD192319A66296004F3C2F /* FISAppDelegate.m */,
 				72DD192519A66296004F3C2F /* Main.storyboard */,
@@ -430,11 +427,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BE5D07C1D1997860093EE69 /* FISPlaylist.m in Sources */,
 				72DD192019A66296004F3C2F /* main.m in Sources */,
-				2BE5D07B1D1997860093EE69 /* FISJukeboxViewController.m in Sources */,
 				72DD192419A66296004F3C2F /* FISAppDelegate.m in Sources */,
-				2BE5D07D1D1997860093EE69 /* FISSong.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +559,11 @@
 				GCC_PREFIX_HEADER = "JukeboxViews/JukeboxViews-Prefix.pch";
 				INFOPLIST_FILE = "JukeboxViews/JukeboxViews-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/KIF",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Specta",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.FIS.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -580,6 +579,11 @@
 				GCC_PREFIX_HEADER = "JukeboxViews/JukeboxViews-Prefix.pch";
 				INFOPLIST_FILE = "JukeboxViews/JukeboxViews-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/KIF",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Specta",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.FIS.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -603,6 +607,11 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "JukeboxViewsTests/JukeboxViewsTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/KIF",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Specta",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.FIS.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -623,6 +632,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JukeboxViews/JukeboxViews-Prefix.pch";
 				INFOPLIST_FILE = "JukeboxViewsTests/JukeboxViewsTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/KIF",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Specta",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.FIS.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";

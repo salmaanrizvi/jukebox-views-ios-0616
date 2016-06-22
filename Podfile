@@ -8,9 +8,9 @@ target 'JukeboxViews' do
   # Pods for JukeboxViews
 
   target 'JukeboxViewsTests' do
-    pod 'Specta'
+    pod 'Specta', '~> 1.0'
     pod 'Expecta'
-    pod 'KIF'
+    pod 'KIF', '~> 3.0'
   end
 
 end
