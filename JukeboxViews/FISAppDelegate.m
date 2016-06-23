@@ -1,6 +1,7 @@
 //  FISAppDelegate.m
 
 #import "FISAppDelegate.h"
+#import "FISPlaylist.h"
 
 @implementation FISAppDelegate
 
